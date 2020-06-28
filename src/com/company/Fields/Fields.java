@@ -8,6 +8,10 @@ public class Fields {
     private int fieldId;
     private static int fieldIdCounter = 0;
 
+    public Double getFieldValue() {
+        return fieldValue;
+    }
+
     Double fieldValue;
     Double fieldArea;
     Crops crops;
@@ -23,13 +27,13 @@ public class Fields {
 //        System.out.println(xrounded);     // This Will Now Print Out The Rounded, Random Number.
         this.fieldArea = xrounded/100.0;
         this.fieldValue=xrounded*oneArValue;
-        System.out.println("Added field: "+ this);
+//        System.out.println("Added field: "+ this);
     }
     @Override
     public String toString() {
         return
                 "Id." + fieldId +
-                ", fieldAerea = " + fieldArea + " ha "+ " fieldValue =  " + fieldValue + "zł";
+                ", fieldAerea = " + fieldArea + " ha "+ " fieldValue =  " + fieldValue + "zł"+"\n";
     }
 
 

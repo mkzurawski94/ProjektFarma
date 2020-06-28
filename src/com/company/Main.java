@@ -12,9 +12,7 @@ public class Main {
         System.out.println("#####   Do you want to be real farmer?   #####");
         System.out.println("#####   Y/N   #####");
         Scanner scan = new Scanner(System.in);
-        String text = scan.nextLine();
-        System.out.println(text);
-        if (text.equals("y")) {
+        if (scan.nextLine().equals("y")) {
             Player player1 = new Player(1);
             Farm farm1 = new Farm();
             player1.farm = farm1;
@@ -28,8 +26,8 @@ public class Main {
             player1.farm.generateFarm();
             System.out.println("#####   You star with " +player1.getCash()+"zł   #####");
             System.out.println(player1.farm);
-            player1.farm.buyBuildings(player1);
-            System.out.println(player1.farm);
+            player1.farm.buy(player1);
+
 
 
         } else {

@@ -2,6 +2,7 @@ package com.company.Buildings;
 
 import com.company.Animals.FarmAnimals.FarmAnimals;
 import com.company.Animals.Pets.Pets;
+import com.company.SaleAble;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -78,7 +79,7 @@ public class Buildings {
 
         Random rand = new Random();
         int x = 0 + rand.nextInt((5) + 1);
-        System.out.println("Added " + building[x].buildingsName + " to your farm");
+//        System.out.println("Added " + building[x].buildingsName + " to your farm");
         return building[x].buildingsName;
     }
 
