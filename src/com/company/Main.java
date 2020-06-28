@@ -25,10 +25,11 @@ public class Main {
             System.out.println("##### " + player1.name + " please write your farm name:   #####");
             player1.farm.farmName = scan.nextLine();
             System.out.println("#####  " + player1.name + " your farm " + player1.farm.farmName + " is ready to go   #####");
-            Buildings randomBuilding1 = new Buildings();
-            Buildings randomBuilding2 = new Buildings(randomBuilding1.buildingGenarator());
-            player1.farm.buildings.add(randomBuilding2);
-            System.out.println(player1.farm.buildings.toString());
+            player1.farm.generateFarm();
+            System.out.println("#####   You star with " +player1.getCash()+"zł   #####");
+            System.out.println(player1.farm);
+            player1.farm.buyBuildings(player1);
+            System.out.println(player1.farm);
 
 
         } else {

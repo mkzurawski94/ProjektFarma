@@ -1,18 +1,30 @@
 package com.company;
 
+import com.company.Buildings.Buildings;
+
+import java.util.Random;
+
 public class Player {
     Integer id;
     String name;
-    Double cash;
+   private Double cash;
     Farm farm;
-
-    public Player(Integer id, String name, Double cash) {
+public final double DEFAULT_PLAYER_CASH=100000.0;
+    public Player(Integer id) {
         this.id = id;
-        this.name = name;
+        this.cash=DEFAULT_PLAYER_CASH;
+
+    }
+
+    public void setCash(Double cash) {
         this.cash = cash;
     }
 
-    public Player(Integer id) {
-        this.id = id;
+    public Double getCash() {
+        return cash;
     }
+
+
+
+
 }
